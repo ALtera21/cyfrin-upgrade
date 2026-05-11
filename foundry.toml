@@ -1,0 +1,17 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+remappings=['@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/', '@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/']
+
+fs_permissions = [
+    { access = "read", path = "./broadcast"},
+    { access = "read", path = "./reports" },
+]
+
+
+[lint]
+exclude_lints = ["mixed-case-variable", "screaming-snake-case-immutable", "unsafe-typecast", "mixed-case-function", "unwrapped-modifier-logic", "asm-keccak256"]
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
